@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="layui/css/layui.css" />
+    <script src="layui/layui.js"></script>
+    <!-- <script>
+        //引入模块
+        layui.use(["layer", "form"], function () {
+            var layer = layui.layer,
+                form = layui.form;
+        });
+    </script> -->
+    <style>
+        body {
+            background-color: #dddddd;
+        }
+
+        header>nav {
+            background-color: #393d49;
+        }
+
+        .mt {
+            margin-top: 30px;
+        }
+
+        .layui-face {
+            text-align: center;
+        }
+
+        .layui-face img {
+            width: 100px;
+            height: 100px;
+            /* border-radius: 50%; */
+        }
+
+        .layui-padd {
+            padding: 9px 0;
+        }
+
+        .layui-ml {
+            padding-right: 17px;
+        }
+        footer>nav{
+            background-color: #2F4056;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        您当前使用的浏览器是 <strong>旧版</strong> 浏览器. 请点此
+        <a href="google.com">upgrade your browser</a> 升级你的浏览器.
+      </p>
+    <![endif]-->
+    <header>
+        <nav class="">
+            <div class="layui-container">
+                <ul class="layui-nav" lay-filter="">
+                    <li class="layui-nav-item  layui-this"><a href="">主页</a></li>
+                    <li class="layui-nav-item"><a href="">图片</a></li>
+                    <li class="layui-nav-item"><a href="">web文档</a></li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">技术问题</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href=""></a></dd>
+                            <dd><a href="">已处理</a></dd>
+                            <dd><a href="">待处理</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="">留言</a></li>
+                    <li class="layui-nav-item"><a href="http://wpa.qq.com/msgrd?v=3&uin=826620300&site=qq&menu=yes"
+                            target="_blank">点击联系站长</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="layui-container mt">
+        <div class="layui-row">
+            <div class="layui-col-lg3 layui-ml">
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="layui-icon layui-icon-face-surprised"></i> 个人信息</div>
+                    <div class="layui-card-body layui-face ">
+                        <img src="img/0075byyxly1g20t8ij6wsj30u011iai9.jpg" alt=""
+                            class="layui-anim layui-anim-scale layui-circle">
+                        <p class="layui-text">姓名：清直</p>
+                        <p class="layui-text">年龄：23</p>
+                        <p class="layui-text">性别：男</p>
+                        <p class="layui-text">宣言：我爱web</p>
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="layui-icon layui-icon-log"></i> 学习进度</div>
+                    <div class="layui-card-body layui-face">
+                        <span class="layui-text">html</span>
+                        <div class="layui-progress">
+                            <div class="layui-progress-bar" lay-percent="100%"></div>
+                        </div>
+                        <span class="layui-text">css</span>
+                        <div class="layui-progress">
+                            <div class="layui-progress-bar" lay-percent="70%"></div>
+                        </div>
+                        <span class="layui-text">javascript</span>
+                        <div class="layui-progress">
+                            <div class="layui-progress-bar" lay-percent="10%"></div>
+                        </div>
+                        <span class="layui-text">react</span>
+                        <div class="layui-progress">
+                            <div class="layui-progress-bar" lay-percent="0%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="layui-icon layui-icon-search"></i> 快速搜索</div>
+                    <div class="layui-card-body">
+                        <form class="layui-form" action="">
+                            <div class="layui-form-item">
+                                <div class="layui-input-inline layui-padd">
+                                    <input type="text" name="text" required lay-verify="required" placeholder="请输入搜索内容"
+                                        autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="layui-form-mid layui-word-aux">
+                                    <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="layui-icon layui-icon-website"></i> 友情链接</div>
+                    <div class="layui-card-body">
+                        待添加……
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-lg9">
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="layui-icon layui-icon-face-surprised"></i> 个人信息</div>
+                    <div class="layui-card-body layui-face ">
+                        <img src="img/0075byyxly1g20t8ij6wsj30u011iai9.jpg" alt=""
+                            class="layui-anim layui-anim-scale layui-circle">
+                        <p class="layui-text">姓名：清直</p>
+                        <p class="layui-text">年龄：23</p>
+                        <p class="layui-text">性别：男</p>
+                        <p class="layui-text">宣言：我爱web</p>
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="layui-icon layui-icon-log"></i> 学习进度</div>
+                    <div class="layui-card-body layui-face">
+                        <span class="layui-text">html</span>
+                        <div class="layui-progress">
+                            <div class="layui-progress-bar" lay-percent="100%"></div>
+                        </div>
+                        <span class="layui-text">css</span>
+                        <div class="layui-progress">
+                            <div class="layui-progress-bar" lay-percent="70%"></div>
+                        </div>
+                        <span class="layui-text">javascript</span>
+                        <div class="layui-progress">
+                            <div class="layui-progress-bar" lay-percent="10%"></div>
+                        </div>
+                        <span class="layui-text">react</span>
+                        <div class="layui-progress">
+                            <div class="layui-progress-bar" lay-percent="0%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="layui-icon layui-icon-search"></i> 快速搜索</div>
+                    <div class="layui-card-body">
+                        <form class="layui-form" action="">
+                            <div class="layui-form-item">
+                                <div class="layui-input-inline layui-padd">
+                                    <input type="text" name="text" required lay-verify="required" placeholder="请输入搜索内容"
+                                        autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="layui-form-mid layui-word-aux">
+                                    <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="layui-icon layui-icon-website"></i> 友情链接</div>
+                    <div class="layui-card-body">
+                        待添加……
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <nav class="">
+                <div class="layui-container">
+                    此站点正在持续开发中……
+                </div>
+            </nav>
+        </footer>
+    </div>
+    </div>
+    <script>
+        //引入模块
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+        layui.use('form', function () {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function (data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>
