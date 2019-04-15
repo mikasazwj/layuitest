@@ -52,9 +52,7 @@
             padding-right: 17px;
         }
 
-        footer>nav {
-            background-color: #2F4056;
-        }
+        
 
         .carousel-item {
             width: 900px;
@@ -81,6 +79,10 @@
         .layui-tab {
             background-color: #fff;
             height: 410px;
+        }
+        footer>.footer {
+            text-align: center;
+            background-color: #2F4056;
         }
     </style>
 </head>
@@ -198,8 +200,8 @@
                         <div class="layui-tab-item">内容4</div>
                         <div class="layui-tab-item">
                             <form class="" action="">
-                                <textarea name="" required lay-verify="required" placeholder=""
-                                    class="layui-textarea" id="submittext"></textarea>
+                                <textarea name="" required lay-verify="required" placeholder="" class="layui-textarea"
+                                    id="submittext"></textarea>
                                 <button class="layui-btn layui-btn-lg layui-btn-normal" id="submitbtn">提交留言</button>
                             </form>
                         </div>
@@ -207,15 +209,17 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <nav class="">
-                <div class="layui-container">
-                    此站点正在持续开发中……
+    </div>
+    <footer>
+        <nav class="footer">
+            <div class="layui-container">
+                <div class="layui-col-lg12">
+                        <span> © 2019 sophiapt.cn </span>
+                        <span> Design by layui </span>
                 </div>
-            </nav>
-        </footer>
-    </div>
-    </div>
+            </div>
+        </nav>
+    </footer>
     <script>
         //引入模块
         layui.use('element', function () {
@@ -244,14 +248,14 @@
         var oTextArea = document.getElementById('submittext');
         var btn = document.getElementById("submitbtn");
 
-        btn.onclick = function(){
-            if (oTextArea.value == ""){
+        btn.onclick = function () {
+            if (oTextArea.value == "") {
                 layer.msg('请输入留言内容');
-            }else{
+            } else {
                 layer.msg('提交成功');
             }
-                
-            
+
+
         }
     </script>
 </body>
