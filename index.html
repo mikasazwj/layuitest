@@ -31,7 +31,7 @@
         }
 
         .mt {
-            margin-top: 30px;
+            margin-top: 10px;
         }
 
         .layui-face {
@@ -51,8 +51,36 @@
         .layui-ml {
             padding-right: 17px;
         }
-        footer>nav{
+
+        footer>nav {
             background-color: #2F4056;
+        }
+
+        .carousel-item {
+            width: 900px;
+            height: 300px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #banner span {
+            position: absolute;
+            z-index: 10;
+            top: 10px;
+            left: 5px;
+            width: 70px;
+            text-align: center;
+            background-color: rgba(50, 205, 216, 0.5);
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        .layui-tab {
+            background-color: #fff;
+            height: 410px;
         }
     </style>
 </head>
@@ -145,58 +173,36 @@
                 </div>
             </div>
             <div class="layui-col-lg9">
-                <div class="layui-card">
-                    <div class="layui-card-header"><i class="layui-icon layui-icon-face-surprised"></i> 个人信息</div>
-                    <div class="layui-card-body layui-face ">
-                        <img src="img/0075byyxly1g20t8ij6wsj30u011iai9.jpg" alt=""
-                            class="layui-anim layui-anim-scale layui-circle">
-                        <p class="layui-text">姓名：清直</p>
-                        <p class="layui-text">年龄：23</p>
-                        <p class="layui-text">性别：男</p>
-                        <p class="layui-text">宣言：我爱web</p>
+                <div class="layui-carousel" id="banner">
+                    <span>美图鉴赏</span>
+                    <div carousel-item>
+                        <div><img src="img/0075byyxly1g20t8k5z5jj30u011idls.jpg" alt=""></div>
+                        <div><img src="img/0075byyxly1g20t8kxsclj30u011cn90.jpg" alt=""></div>
+                        <div><img src="img/0075byyxly1g20t8njja6j30u011cani.jpg" alt=""></div>
+                        <div><img src="img/0075byyxly1g20t8o84m4j30u011caop.jpg" alt=""></div>
+                        <div><img src="img/0075byyxly1g20t8rnf9zj30u011i49k.jpg" alt=""></div>
                     </div>
                 </div>
-                <div class="layui-card">
-                    <div class="layui-card-header"><i class="layui-icon layui-icon-log"></i> 学习进度</div>
-                    <div class="layui-card-body layui-face">
-                        <span class="layui-text">html</span>
-                        <div class="layui-progress">
-                            <div class="layui-progress-bar" lay-percent="100%"></div>
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this">随心所欲</li>
+                        <li>个人随笔</li>
+                        <li>技术分享</li>
+                        <li>问题解决</li>
+                        <li>提交留言</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show"></div>
+                        <div class="layui-tab-item">内容2</div>
+                        <div class="layui-tab-item">内容3</div>
+                        <div class="layui-tab-item">内容4</div>
+                        <div class="layui-tab-item">
+                            <form class="" action="">
+                                <textarea name="" required lay-verify="required" placeholder=""
+                                    class="layui-textarea" id="submittext"></textarea>
+                                <button class="layui-btn layui-btn-lg layui-btn-normal" id="submitbtn">提交留言</button>
+                            </form>
                         </div>
-                        <span class="layui-text">css</span>
-                        <div class="layui-progress">
-                            <div class="layui-progress-bar" lay-percent="70%"></div>
-                        </div>
-                        <span class="layui-text">javascript</span>
-                        <div class="layui-progress">
-                            <div class="layui-progress-bar" lay-percent="10%"></div>
-                        </div>
-                        <span class="layui-text">react</span>
-                        <div class="layui-progress">
-                            <div class="layui-progress-bar" lay-percent="0%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="layui-card">
-                    <div class="layui-card-header"><i class="layui-icon layui-icon-search"></i> 快速搜索</div>
-                    <div class="layui-card-body">
-                        <form class="layui-form" action="">
-                            <div class="layui-form-item">
-                                <div class="layui-input-inline layui-padd">
-                                    <input type="text" name="text" required lay-verify="required" placeholder="请输入搜索内容"
-                                        autocomplete="off" class="layui-input">
-                                </div>
-                                <div class="layui-form-mid layui-word-aux">
-                                    <button class="layui-btn" lay-submit lay-filter="formDemo">搜索</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="layui-card">
-                    <div class="layui-card-header"><i class="layui-icon layui-icon-website"></i> 友情链接</div>
-                    <div class="layui-card-body">
-                        待添加……
                     </div>
                 </div>
             </div>
@@ -224,6 +230,29 @@
                 return false;
             });
         });
+        //轮播图模块
+        layui.use('carousel', function () {
+            var carousel = layui.carousel;
+            //建造实例
+            carousel.render({
+                elem: '#banner'
+                , width: '100%' //设置容器宽度
+                , arrow: 'always' //始终显示箭头
+                //,anim: 'updown' //切换动画方式
+            });
+        });
+        var oTextArea = document.getElementById('submittext');
+        var btn = document.getElementById("submitbtn");
+
+        btn.onclick = function(){
+            if (oTextArea.value == ""){
+                layer.msg('请输入留言内容');
+            }else{
+                layer.msg('提交成功');
+            }
+                
+            
+        }
     </script>
 </body>
 
