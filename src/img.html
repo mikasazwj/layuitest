@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>图片赏析</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../layui/css/layui.css" />
+    <script src="../layui/layui.js"></script>
+    <!-- <script>
+            //引入模块
+            layui.use(["layer", "form"], function () {
+                var layer = layui.layer,
+                    form = layui.form;
+            });
+        </script> -->
+    <style>
+        body {
+            background-color: #dddddd;
+        }
+
+        header>nav {
+            background-color: #393d49;
+        }
+
+        .img-list div {
+            margin-top: 10px;
+            width: 100%;
+            height: 300px;
+        }
+
+        .img-list div img {
+            width: 100%;
+            height: 300px;
+        }
+
+        div.mt {
+            margin-top: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header>
+        <nav class="">
+            <div class="layui-container">
+                <ul class="layui-nav" lay-filter="">
+                    <li class="layui-nav-item"><a href="../index.html">主页</a></li>
+                    <li class="layui-nav-item  layui-this"><a href="src/img.html">图片</a></li>
+                    <li class="layui-nav-item"><a href="">web文档</a></li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">技术问题</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href=""></a></dd>
+                            <dd><a href="">已处理</a></dd>
+                            <dd><a href="">待处理</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="">留言</a></li>
+                    <li class="layui-nav-item"><a href="http://wpa.qq.com/msgrd?v=3&uin=826620300&site=qq&menu=yes"
+                            target="_blank">点击联系站长</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="layui-container mt">
+        <div class="layui-col-lg3">
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">美女图片</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" id="now-1">文雅古典</a></dd>
+                        <dd><a href="javescript:;" id="now">时尚现代</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">人与自然</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">自然美景</a></dd>
+                        <dd><a href="">禽类</a></dd>
+                        <dd><a href="">猛兽类</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-col-lg9">
+            <div id="male" class="hidden">
+                <img src="../img/0075byyxly1g20t8ij6wsj30u011iai9.jpg" alt="">
+            </div>
+            <div id="male-1" class="hidden">
+                <img src="../img/0075byyxly1g20t8kxsclj30u011cn90.jpg" alt="">
+            </div>
+            <!-- <div id="male">
+                    <img src="../img/0075byyxly1g20t8k5z5jj30u011idls.jpg" alt="">
+            </div> -->
+        </div>
+    </div>
+    <script>
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+        var oNow = document.getElementById('now');
+        var oMale = document.getElementById('male');
+        oNow.onclick = function () {
+            oMale.classList.add('show');
+            oNow.oncik
+        }
+        var oNowa = document.getElementById('now-1');
+        var oMalea = document.getElementById('male-1');
+        oNowa.onclick = function () {
+            oMalea.classList.add('show')
+        }
+    </script>
+</body>
+
+</html>
